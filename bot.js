@@ -8,6 +8,13 @@ const client = new Discord.Client();
 
 let channel;
 
+
+client.on("message", (msg) => {
+    if(msg.content === "hej") {
+        msg.reply("Hej du")
+    }
+})
+
 client.login(process.env.BOT_TOKEN).then(() => {
     channel = client.channels.cache.get("784086230769336353");
 }) 
