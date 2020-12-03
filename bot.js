@@ -13,7 +13,7 @@ client.on("message", (msg) => {
     if(msg.content === "hej") {
         msg.reply("Hej du")
     }
-})
+}) 
 
 client.login(process.env.BOT_TOKEN).then(() => {
     channel = client.channels.cache.get("784086230769336353");
@@ -27,7 +27,7 @@ let friday = new cron.CronJob("58 8 * * 5", () => {
 });
 
 let test = new cron.CronJob("* * * * *", () => {
-    channel.send("**```Kom ihåg lektionen med Ulf kl. 09.00```**");
+    channel.send("@everyone Kom ihåg lektionen med Ulf kl. 09.00");
   });
 monday.start();
 friday.start();
